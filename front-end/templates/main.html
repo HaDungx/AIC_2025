@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAIN</title>
+</head>
+<body>
+    <style>
+        /* Ẩn checkbox gốc */
+        .switch input {
+            display: none;
+        }
+
+        /* Hộp chứa nút gạt */
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 42px;
+            height: 24px;
+        }
+
+        /* Thanh gạt */
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: 0.4s;
+            border-radius: 24px; /* Làm tròn */
+        }
+
+        /* Nút gạt tròn */
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 20px;
+            width: 20px;
+            left: 2px;
+            bottom: 2px;
+            background-color: white;
+            transition: 0.4s;
+            border-radius: 50%; /* Làm tròn */
+        }
+
+        /* Khi checkbox được chọn, thay đổi màu sắc */
+        input:checked + .slider {
+            background-color: #4CAF50;
+        }
+
+        /* Khi checkbox được chọn, di chuyển nút tròn */
+        input:checked + .slider:before {
+            transform: translateX(18px);
+        }
+    </style>
+    <label class="switch">
+        <input type="checkbox" id="toggleSwitch">
+        <span class="slider"></span>
+    </label>
+
+    <script>
+        const toggleSwitch = document.getElementById('toggleSwitch');
+        toggleSwitch.addEventListener('change', function() {
+            if (this.checked) {
+                console.log('Bật');
+            } else {
+                console.log('Tắt');
+            }
+        });
+    </script>
+    <p>OFF - English</p>
+    <p>ON - Vietnamese</p>    
+</body>
+
+<body>
+    <h1>Search</h1>
+    <form method="POST">
+        <input type="text" name="query" placeholder="Enter your search..." required>
+        <button type="submit">Search</button>
+    </form>
+
+    {% if query %}
+        {{ query }}
+    {% else %}
+        <p>No query provided</p>
+    {% endif %}        
+</body>
