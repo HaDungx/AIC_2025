@@ -1,0 +1,5 @@
+design:
+- figma: https://www.figma.com/design/cNuom63EW0zsXoFCOHrIDk/AIC2025-IRS?node-id=20-339&t=gVMPd1O1f2V0JxCN-1
+- protoype: https://www.figma.com/proto/cNuom63EW0zsXoFCOHrIDk/AIC2025-IRS?node-id=20-340&t=UqYr5r9BkaVSa5p6-1&scaling=scale-down&content-scaling=fixed&page-id=20%3A339
+
+main_project: #TODO
